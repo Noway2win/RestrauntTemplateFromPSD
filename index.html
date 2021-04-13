@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/scssstyle.css" />
+    <link
+      media="(max-width: 1024px)"
+      rel="stylesheet"
+      href="css/miniscssstyle.css"
+    />
+    <link rel="stylesheet" href="css/animationClasses.css" />
+    <link
+      media="(max-width: 380px)"
+      rel="stylesheet"
+      href="css/minimalscssstyle.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <button class="nav-button" onclick="ToogleScript()">MENU</button>
+      <nav id="navbar">
+        <a href="#menu">MENU</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#galery">GALLERY</a>
+        <span id="logo"><img src="/IMG/LOGO.png" alt="LOGO" /></span>
+        <a href="#book">BOOKINGS</a>
+        <a href="#">CONTACT</a>
+        <a href="#review">REVIEWS</a>
+        <button id="modal-btn">Donate!</button>
+      </nav>
+    </header>
+    <div id="modal1" class="modal-window">
+      <div class="modal-content">
+        <span id="modal-close">&times;</span>
+        <h2>
+          <img src="IMG/left-shape.png" alt="clip" /> THANKS FOR DONATE!
+          <img src="IMG/right-shape.png" alt="clip" />
+        </h2>
+        <p>Our credits *******************************************</p>
+        <p>We waiting for you, and hope you will like us and rate.</p>
+      </div>
+    </div>
+    <main>
+      <div class="firstpage">
+        <a name="menu"></a>
+        <section class="page-one">
+          <h2>
+            Start Your Meal With Our Exclusive Menu <br />
+            <a href="#" class="page-one-href">LEARN MORE...</a>
+          </h2>
+          <img
+            id="first-page-logo"
+            src="IMG/firstpage-logo.png"
+            alt="your logo"
+          />
+          <p class="page-one-text">
+            BOOK YOUR <br />
+            TABLE <span class="page-one-text-focus"> NOW</span>
+          </p>
+        </section>
+      </div>
+      <div class="secondpage">
+        <a name="about"></a>
+        <section class="page-two">
+          <h2 id="page-two-about">
+            <img src="IMG/left-shape.png" alt="clip" /> ABOUT
+            <span id="page-two-about-gold">L'Gran</span>
+            <img src="IMG/right-shape.png" alt="clip" />
+          </h2>
+          <p class="page-two-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida. Risus commodo vive rra maecenas
+            accumsan lacus vel facilisis. Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit, sed do eiusmod tempor incid idunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure d
+          </p>
+          <a href="#" class="page-two-href"
+            >Visit OR BOOK <span class="page-one-text-focus">NOW</span></a
+          >
+        </section>
+      </div>
+      <div class="thirdpage">
+        <section class="page-three">
+          <h2 id="page-three-about">
+            <img src="IMG/left-shape.png" alt="clip" /> OUR FOOD QUALITY
+            <img src="IMG/right-shape.png" alt="clip" />
+          </h2>
+          <p class="page-three-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+            ipsum suspendisse ultrices gravida.
+          </p>
+          <a href="#" class="page-three-href"
+            >DOUBLE THE FUN<br />
+            ON EVERY SATURDAT<br />
+            <span class="page-one-text-focus">GET UP TO 50% DISCOUNT</span></a
+          >
+        </section>
+      </div>
+      <div class="fourthpage">
+        <a name="galery"></a>
+        <h2 id="page-four-about">
+          <img src="IMG/left-shape.png" alt="clip" /> GALLERY
+          <img src="IMG/right-shape.png" alt="clip" />
+        </h2>
+        <section class="page-four">
+          <div class="page-four-col">
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-1.png"
+              alt="first-photo"
+            />
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-2.png"
+              alt="second-photo"
+            />
+          </div>
+          <div class="page-four-col">
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-3.png"
+              alt="Third-photo"
+            />
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-4.png"
+              alt="Fourth-photo"
+            />
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-5.png"
+              alt="fifth-photo"
+            />
+          </div>
+          <div class="page-four-col">
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-6.png"
+              alt="Sixth-photo"
+            />
+            <img
+              class="page-four-image"
+              src="/IMG/cuted-7.png"
+              alt="Seventh-photo"
+            />
+          </div>
+        </section>
+      </div>
+      <div class="fifthpage">
+        <a name="book"></a>
+        <h2 id="page-five-about">
+          <img src="IMG/left-shape.png" alt="clip" /> BOOK NOW
+          <img src="IMG/right-shape.png" alt="clip" />
+        </h2>
+        <h3>Book Your Table Now And Have A Great Meal !</h3>
+        <section class="page-five">
+          <form action="#" method="post" class="page-five-form">
+            <div class="page-five-form-div">
+              <p>Your full name?</p>
+              <input
+                class="page-five-form-input"
+                type="text"
+                placeholder="Write your name here..."
+              />
+              <p>How many people?</p>
+              <select class="page-five-form-input" name="select">
+                <option value="1">1 people</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5+">More people</option>
+              </select>
+              <p>What is the date?</p>
+              <input class="page-five-form-input" type="datetime-local" />
+            </div>
+            <div class="page-five-form-div">
+              <p>Your email address?</p>
+              <input class="page-five-form-input" type="email" />
+              <p>What time?</p>
+              <input class="page-five-form-input" type="time" />
+              <p>Your phone number?</p>
+              <input class="page-five-form-input" type="tel" />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+      </div>
+      <div class="sixth-page" id="review">
+        <h2 id="page-six-about">
+          <img src="IMG/left-shape.png" alt="clip" /> REVIEWS
+          <img src="IMG/right-shape.png" alt="clip" />
+        </h2>
+        <section class="page-six">
+          <div class="page-six-tabs">
+            <div class="page-six-tabs-head">
+              <div class="page-six-tabs-head-item active">FIRST</div>
+              <div class="page-six-tabs-head-item">SECOND</div>
+              <div class="page-six-tabs-head-item">THIRD</div>
+            </div>
+            <div class="page-six-tabs-content">
+              <div class="page-six-tabs-content-item active">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio,
+                iusto eligendi. Deserunt, enim consequuntur accusamus itaque
+                ipsam aliquid? Perspiciatis ex illum officiis officia
+                dignissimos magnam doloribus aliquam accusantium obcaecati
+                dolore.
+              </div>
+              <div class="page-six-tabs-content-item">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+                ipsa ullam dolore sequi. Eveniet omnis adipisci quae praesentium
+                voluptatibus ipsa minima officia rerum? Molestias ipsa totam
+                blanditiis suscipit, aliquam deserunt!
+              </div>
+              <div class="page-six-tabs-content-item">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Asperiores deleniti commodi dignissimos eveniet quae perferendis
+                vero tempora totam atque dolores, nobis beatae dolor, suscipit
+                sit vel cum perspiciatis earum quidem.
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-menu">
+        <span><img src="/IMG/LOGO.png" alt="LOGO" /></span>
+        <a href="#menu">MENU</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#galery">GALLERY</a>
+        <a href="#book">BOOKINGS</a>
+        <a href="#">CONTACT</a>
+        <a href="#">BLOG</a>
+      </div>
+      <div class="footer-media">
+        <a href="#"><img src="IMG/facebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="IMG/twitter.png" alt="twitter" /></a>
+        <a href="#"><img src="IMG/inst.png" alt="Inst" /></a>
+        <a href="#"><img src="IMG/pinterest.png" alt="Pinterest" /></a>
+      </div>
+    </footer>
+    <script src="scripts/menuAndModal.js"></script>
+    <script src="scripts/tabs.js"></script>
+    <script src="scripts/animation.js"></script>
+  </body>
+</html>

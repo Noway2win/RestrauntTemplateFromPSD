@@ -1,0 +1,25 @@
+body {
+  padding: 86px 0 12px 0;
+}
+header {
+  padding: 5px 5px 5px 5px;
+}
+nav {
+  flex-direction: column;
+  display: none;
+  align-items: flex-start;
+}
+nav > a {
+  margin: 5px;
+}
+#logo {
+  order: -3;
+}
+.nav-button {
+  display: block;
+  height: 45px;
+}
+.firstpage {
+  background-color: red;
+  align-items: flex-start;
+}
