@@ -1,41 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-	const firstPage = document.querySelector('.firstpage'),
+	const animatedMenu = menuToogling();
+	window.addEventListener('scroll', () => {
+		let scrollTop = window.scrollY;
+		animatedMenu(scrollTop);
+	})
+})
+
+function menuToogling() {
+	const firstPageHeight = document.querySelector('.firstpage').offsetHeight,
 		secondPage = document.querySelector('.secondpage'),
 		header = document.querySelector('header');
+	let totalHeaderHeight = Math.round(Number(header.offsetHeight) + Number(window.getComputedStyle(document.querySelector('body')).paddingTop.slice(0, -2)));
+	let hideMenuPoint = Number(document.querySelector('.fifthpage').offsetTop);
 	let opened = false;
-	window.addEventListener('scroll', () => {
-		let scrollTop = window.scrollY,
-			scrollHeight = window.getComputedStyle(document.querySelector('body')).height.slice(0, -2);
-		menuAnimation(scrollTop, scrollHeight)();
-		function menuAnimation(scroll, height) {
-			let bodyPadding = window.getComputedStyle(document.querySelector('body')).paddingTop.slice(0, -2);
-			let hideMenuPoint = Number(height - (document.querySelector('.fifthpage').offsetHeight + document.querySelector('.sixth-page').offsetHeight + document.querySelector('footer').offsetHeight));
-			let firstPageHeight = firstPage.offsetHeight,
-				headerHeight = +header.offsetHeight,
-				headerHeightTotal = headerHeight + Number(bodyPadding);
-			return function () {
-				switch (true) {
-					case (scroll <= headerHeightTotal):
-						setDefaultMenu(header);
-						break;
-					case ((scroll < (firstPageHeight + headerHeightTotal)) && opened):
-						hideMenu(header, secondPage);
-						opened = false;
-						break;
-					case (scroll >= (firstPageHeight + headerHeightTotal) && scroll < hideMenuPoint):
-						showMenu(header, secondPage, headerHeightTotal);
-						opened = true;
-						break;
-					case (scroll >= hideMenuPoint):
-						hideMenu(header, secondPage);
-						opened = false;
-						break;
-				}
-			}
+	return function (scrollTop) {
+		console.log(`now ${opened}`)
+		if (scrollTop <= totalHeaderHeight) {
+			setDefaultMenu(header);
+			return opened = false;
+		} else if ((scrollTop < (firstPageHeight + totalHeaderHeight)) && opened) {
+			hideMenu(header, secondPage);
+			return opened = false;
+		} else if (scrollTop >= (firstPageHeight + totalHeaderHeight) && scrollTop < hideMenuPoint) {
+			showMenu(header, secondPage, totalHeaderHeight);
+			return opened = true;
+		} else if (scrollTop >= hideMenuPoint) {
+			hideMenu(header, secondPage);
+			return opened = false;
 		}
-	})
-});
-
+	}
+}
 
 function showMenu(elem, secondElem, margin) {
 	secondElem.style.marginTop = `${margin}px`;
