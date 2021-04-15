@@ -1,22 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const animatedMenu = menuToogling();
-	const sectionAppear = sectionAnimation();
+	const sectionAppear = elemAnimation('.dissapeared_div', 'appeared_div');
+	const imageAppearLeft = elemAnimation('.dissapeared_img-left', 'appeared_img-left');
+	const imageAppearRight = elemAnimation('.dissapeared_img-right', 'appeared_img-right');
+	const imageAppearCenter = elemAnimation('.dissapeared_img-center', 'appeared_img-center');
 	window.addEventListener('scroll', () => {
 		let scrollTop = window.scrollY;
-		let windowCenter = Math.round((window.innerHeight / 2) + scrollTop);
+		let windowCenter = Math.round((window.innerHeight) + scrollTop);
 		animatedMenu(scrollTop);
 		sectionAppear(windowCenter);
+		imageAppearLeft(windowCenter);
+		imageAppearRight(windowCenter);
+		imageAppearCenter(windowCenter);
 	})
 })
 
-function sectionAnimation() {
-	const sections = document.querySelectorAll('.dissapeared_div');
+function elemAnimation(elemSelector, elemModifier) {
+	const sections = document.querySelectorAll(elemSelector),
+		modifierClassName = elemModifier;
 	return function (windowCenter) {
 		sections.forEach(section => {
-
 			let sectionOffset = section.offsetTop;
 			if (windowCenter >= sectionOffset) {
-				showSection(section);
+				showSection(section, modifierClassName);
 			}
 		})
 	}
@@ -64,6 +70,6 @@ function setDefaultMenu(elem) {
 function setDefaultMargin(elem) {
 	elem.style.marginTop = `0px`;
 }
-function showSection(section) {
-	section.classList.add('appeared_div');
+function showSection(section, modifierClass) {
+	section.classList.add(`${modifierClass}`);
 }
